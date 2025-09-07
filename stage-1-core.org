@@ -1,10 +1,9 @@
-#+title: Org Mode Note-Taking Manual
+#+title: Stage 1 – Core Org Mode
 #+author: Erik An
 #+date: <2025-08-15>
 #+options: toc:2 num:t
 #+startup: overview
 
-* Introduction
 * Organising notes as files
 :properties:
 :created: <2025-08-15>

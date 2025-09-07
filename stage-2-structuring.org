@@ -1,0 +1,67 @@
+#+title: Stage 2 - Structuring
+#+author: Erik An
+#+date: <2025-09-07>
+#+options: toc:2 num:t
+#+startup: overview
+
+* 1. Principle: One Topic, One File
+- Keep each Org file focused on a single subject, book, or project.
+- Examples:
+  - math-linear-algebra.org
+  - ds-statistics.org
+  - reading-plato-republic.org
+  - personal-todo.org
+
+* 2. Suggested Folder Hierarchy
+#+begin_src text
+org-notes/
+│
+├── university/
+│   ├── mathematics/
+│   │   ├── linear-algebra.org
+│   │   ├── calculus.org
+│   │   └── statistics.org
+│   ├── data-science/
+│   │   ├── machine-learning.org
+│   │   └── probability.org
+│   └── general.org
+│
+├── books/
+│   ├── plato-republic.org
+│   ├── camus-stranger.org
+│   └── dostoevsky-brothers-karamazov.org
+│
+├── 42-projects/
+│   ├── higgs-boson-ml.org
+│   ├── exoplanet-detection.org
+│   └── ft_linear_regression.org
+│
+└── personal/
+    ├── todo.org
+    ├── ideas.org
+    └── journal.org
+#+end_src
+
+* 3. Linking Between Files
+- To another file:
+  =[[file:../books/plato-republic.org][Notes on Plato’s Republic]]=
+- To specific heading:
+  =[[file:linear-algebra.org::*Vector Spaces][Vector Spaces in Linear Algebra]]=
+
+* 4. Master Index Files
+- Create `index.org` as a central hub:
+  - Links to all subjects
+  - Example:
+    - [[file:university/mathematics/linear-algebra.org][Linear Algebra]]
+    - [[file:books/plato-republic.org][The Republic]]
+    - [[file:projects/higgs-boson-ml.org][Higgs Boson ML Project]]
+
+* 5. Workflow Of Notetaking
+- During lectures/reading: write into the subject file.
+- After: link related topics across files.
+- Weekly: review `index.org` to ensure everything is connected.
+
+* 6. Why This Matter
+- Keeps files lightweight and searchable.
+- Helps with LaTeX export later (clean separation of topics).
+- Scales well for multiple semesters/books/projects.

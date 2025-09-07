@@ -1,0 +1,16 @@
+#+title: Org Mode Learning Course
+#+author: Erik An
+#+date: <2025-09-07>
+#+options: toc:2 num:t
+#+startup: overview
+
+* Course Overview
+This folder contains a structured set of lessons for learning Org Mode, designed for note-taking in my university and beyond.
+
+* Stages
+1. [[file:stage-1-core.org][Stage 1 – Core Org Mode (Headings, Lists, Formatting)]]
+2. [[file:stage-2-structuring.org][Stage 2 – Structuring & Linking]]
+3. [[file:stage-3-latex.org][Stage 3 – Tables & LaTeX Integration]]
+4. [[file:stage-4-books.org][Stage 4 – Book Notes & Literature]]
+5. [[file:stage-5-navigation.org][Stage 5 – Advanced Navigation]]
+6. [[file:stage-6-advanced.org][Stage 6 – Advanced Workflows]]
