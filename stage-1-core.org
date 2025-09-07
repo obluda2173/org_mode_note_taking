@@ -42,6 +42,7 @@
 **** Definitions
 ***** Limit
 A function's limit describes behavior near a point.
+
 * Lists & Checkboxes
 ** Bullet Lists
 - Start with =-=, =+=, =*=
@@ -66,7 +67,7 @@ Org has multiple ordered lists, you can swith them with selecting a list and pre
 ** Checkboxes
 - [ ] Task not done.
 - [X] Task completed. (C-c-c)
-- Use progress cookies in headings: [1/5] or [33%]
+- Use progress cookies in headings: [3/4] or [10%]
 
 ** Example
 *** Study plan [1/3]
@@ -82,6 +83,7 @@ Org has multiple ordered lists, you can swith them with selecting a list and pre
 - =code= -> code snipets or variable names.
 - ~verbatim~ -> keep text literal.
 - +strikethrough+ -> remove outdated info.
+
 ** Example
 *** Theorem (Intermediate Value Theorem)
 If f is *continuous* on [a,b] and k is between f(a) and f(b),

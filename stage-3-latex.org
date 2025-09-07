@@ -1,0 +1,58 @@
+#+title: Stage 3 - Latex
+#+author: Erik An
+#+date: <2025-09-07>
+#+options: toc:2 num:t
+#+startup: overview
+
+* 1. Creating Tables in Org
+- type `|` and Org will start a table
+- Example:
+
+  |-----+-------+--------------|
+  | Age | Name  | Major        |
+  |-----+-------+--------------|
+  |  21 | Alice | Data Science |
+  |  23 | Bob   | Mathematics  |
+  |     |       |              |
+  |-----+-------+--------------|
+* 2. Quick Table Commands
+- =C-c |= -> Create a table with given parameters
+- =M-<navigation keys>= -> Move rows and columns
+- =M-S-<navigation keys>= -> Insert/delete columns/rows
+- =C-c -= -> Insert horizontal line
+
+* 3. Tables for Mathematics
+Example: matrix layout
+| 1 | 0 |
+| 0 | 1 |
+
+Example: probability table
+| Event | P(X) |
+|-------+------|
+| Heads |  0.5 |
+| Tails |  0.5 |
+
+* 4. Latex Inline Math
+- Write inline math with:  \( aˆ2 + bˆ2 = cˆ2 \)
+- Example: Probability density \( f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2} \)
+
+* 5. Latex Display Math
+- For equations on their own line, use:
+  \[ \int_0^1 x^2 \, dx = \frac{1}{3} \]
+
+* 6. Exporting Latex
+- =C-c C-e l p= -> Export Org file to PDF via Latex
+- =C-c C-e l o= -> Export and open PDF immediately
+
+* 7. Mixing Org and Latex
+- You can write normal text, then drop equations where needed:
+  The vector space is defined by:
+  \[ V = \{ (x, y, z) \in \mathbb{R}^3 \} \]
+
+- Or embed Latex environments directly:
+  #+begin_latex
+  \begin{align}
+  E &= mc^2 \\
+  F &= ma
+  \end{align}
+  #+end_latex
