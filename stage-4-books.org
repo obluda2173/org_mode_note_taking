@@ -1,0 +1,59 @@
+#+title: Stage 4 - Book Notes & Literature
+#+author: Erik An
+#+date: <2025-09-07>
+#+options: toc:2 num:t
+#+startup: overview
+
+* 1. Purpose of Book Notes
+- Learning is solely dependent on effort. The more effort is put into learning, the better it is remembered.
+- Org gives structure: headings for chapters, lists for arguments, quotes, and even tags for themes.
+
+* 2. File Naming
+- Use clear, conscious and consistent names.
+  - plato-republic.org
+  - camus-stranger.org
+  - dostoyevski-karamazov.org
+- Keep everything in `/books` folder.
+
+* 3. Recommended Structure of the Book File
+Example:
+** Book - The Republic
+*** Metadata
+- Author: Plato
+- Year: ~375 BC
+- Themes: Justice, Politics, Philosophy
+- Status: [ ] Not started / [x] Finished
+
+** Chapter 1: Cephalus on Justice
+ - Summary: Justice as telling truth and paying debts.
+ - Key Quotes:
+   #+begin_quote
+   /"Justice means living up to your legal obligations and being honest."/
+   #+end_quote
+ - My Thoughts:
+   - Connects to moders legalism.
+   - Weakness: does not account for unjust laws.
+
+** Chapter 2: Glaucon’s Challenge
+ - Summary: Justice only valued by consequences, not itself.
+ - Notes:
+   - Ring of Gyges → thought experiment.
+   - Related modern question: AI alignment and hidden behavior.
+ - My Thoughts:
+   - Could justice exist without consequences?
+
+* 4. Useful Org Features for Literature Notes
+*- **Quotes** → `#+begin_quote ... #+end_quote`
+- **Emphasis** → *bold*, /italic/, _underline_.
+- **Tags** → Add tags to headings for themes:
+  * Chapter 2: Glaucon’s Challenge :ethics:ai:
+- **Links** → Connect a passage to another book:
+  =[[file:camus-stranger.org::*Absurdism][Absurdism in The Stranger]]= 5. General Note Taking Strategies
+
+* 6. Example Workflow
+- While reading:
+  - Write raw and simple bullet notes.
+- After reading a chapter:
+  - Summarise in 2-3 sentences.
+  - Pick 2-3 quotes.
+  - Add my personal interpretation.
