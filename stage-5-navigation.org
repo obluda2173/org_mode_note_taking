@@ -1,0 +1,43 @@
+#+title: Stage 5 - Advanced Navigation
+#+author: Erik An
+#+date: <2025-09-07>
+#+options: toc:2 num:t
+#+startup: overview
+
+* 1. Why Navigation matters
+- As my notes will grow up in size, scrolling would become slow and messy.
+- Org has powerful built-in navigation: jump, fold, search, agenda.
+- Goal: reach any note within 5 secconds.
+
+* 2. Folding and Cycling
+- Use `TAB` to fold/unfold headings.
+- Use `S-TAB` to cycle the visibility of the whole buffer.
+  - Overview -> Top level only
+  - Contents -> All headings
+  - Show all -> Everything expanded
+
+* 3. Outlining shortcuts
+- `C-c C-n` -> Next heading
+- `C-c C-p` -> Previous heading
+- `C-c C-f` -> Next heading same level
+- `C-c C-b` -> Previous heading same level
+- `C-c C-u` -> Go up one level
+
+* 4. Search & Links
+- `C-s` -> Incremental search
+- `C-c C-o` -> Open link at point (Enter also works)
+- I can add *internal links*:
+  =[[* 2. Folding and Cycling][Jump to point 2]]=
+- Or file links:
+  =[[file:stage-1-core.org::*Lists & Checkboxes][Stage 1 – Core Org Mode]]=
+
+* 5. Global Agenda View :ethics:absurdism:
+- Use tags, TODOs, or scheduled items across multiple files.
+- Example:
+  - Tag passages: :ethics:absudrism:
+  - Search agenda: `SPC n m` -> match by tag.
+
+* 6. Jumping with Bookmarks
+- `C-x r m` -> Set bookmark at point.
+- `C-x r b` -> Jump to a bookmark.
+- `C-x r l` -> list all bookmarks.
