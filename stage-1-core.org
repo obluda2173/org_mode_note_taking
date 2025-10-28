@@ -3,6 +3,7 @@
 #+date: <2025-08-15>
 #+options: toc:2 num:t
 #+startup: overview
+#+lastmod: <2025-10-28 17:11>
 
 * Organising notes as files
 :properties:
@@ -84,7 +85,11 @@ Org has multiple ordered lists, you can swith them with selecting a list and pre
 - ~verbatim~ -> keep text literal.
 - +strikethrough+ -> remove outdated info.
 
+Also, to make it automised, you can use combination of =C-c C-x C-f= on selected words to turn them into any format.
 ** Example
 *** Theorem (Intermediate Value Theorem)
 If f is *continuous* on [a,b] and k is between f(a) and f(b),
 then there exists c in [a,b] such that f(c) = k.
+
+** Tabulance
+To change multiple lines tabulance, select the lines and use =C-x TAB= and then use navigation keys to move the selected text.
