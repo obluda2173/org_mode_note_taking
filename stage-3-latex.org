@@ -3,6 +3,7 @@
 #+date: <2025-09-07>
 #+options: toc:2 num:t
 #+startup: overview
+#+lastmod: <2025-11-23 15:36>
 
 * 1. Creating Tables in Org
 - type `|` and Org will start a table
@@ -33,6 +34,7 @@ Example: probability table
 | Tails |  0.5 |
 
 * 4. Latex Inline Math
+- Render Latex inside of the org file: C-c C-x C-l
 - Write inline math with:  \( aˆ2 + bˆ2 = cˆ2 \)
 - Example: Probability density \( f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2} \)
 
