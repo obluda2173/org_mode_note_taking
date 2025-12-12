@@ -1,0 +1,76 @@
+#+title: Stage 6 Code Blocks
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2025-12-12>
+#+lastmod: <2025-12-12 17:47>
+#+options: num:t
+#+startup: overview
+
+* About
+This little learning session is dedicated to "header arguments" of org's code blocks. Note that it would be mainly focused around Julia language.
+
+* 1. =:session= (The most important for Julia)
+By default, every code block starts a new Julia process. Because Julia has a startup cost also known as latency, this can be slow. Using =:session= keeps one background process alive, making subsequent blocks run instantly.
+
+- =:session *my-julia*=: Creates a persistent REPL session named "my-julia". Variables created in one block are accessible in other.
+- =:session= If you don;t give it a name, it defaluts to a general session, which is usually called default.
+
+#+begin_quote
+Examples:
+
+#+begin_src julia :session *analysis*
+x = 10
+#+end_src
+
+#+begin_src julia :session *analysis*
+# This runs instantly and knows that x is 10
+println(x + 5)
+#+end_src
+#+end_quote
+
+* 2. =:results= (Controlling output)
+This determines what org mode captures after running a code.
+
+- =:results value= (default): Returns the value of the last expression in the block. Usefull for calculations and arrays.
+- =:results output=: Returns everything printed to STDOUT.
+- =:results silent=: Runs the code but puts nothing in the file. Useful for setup blocks of packages.
+- =:results drawer=: This hides the massive output inside a collapcible property drawer so it does not clutter a buffer.
+
+
+* 3. =:exports= (Controlling PDF/HTML generation)
+When you export your org file (e.g. to a pdf), you don't always want to show everything.
+
+- =:export both=: Shows the code and the result.
+- =:export code=: Shows only the code (hides the result).
+- =:export results=: Shows only the result (hides the code).
+- =:export none=: Runs the code but shows nothing in the final document.
+
+* 4. =:var= (Passing data into Julia)
+You can pass variables from org mode (or other code blocks) directly into Julia. Org handes the syntax translation for you.
+
+#+begin_quote
+Example:
+
+#+NAME: my_table
+| Name  | Value |
+|-------+-------|
+| Alpha | 10    |
+| Beta  | 20    |
+
+#+begin_src julia :var data=my_table
+# 'data' is automatically available as a Matrix or Array inside Julia
+println(data[1,2]) # Prints 10
+#+end_src
+#+end_quote
+
+* 5. =:tangle= (Extracting code)
+If you are writing a "Literate Program" (writing code inside a text document), you might eventually want to save just the source code to a .jl file.
+
+- =:tangle yes=: Extracts this block to a file named after your org file.
+- =:tangle path/to/script.jl=: Extracts this block to a specific file location.
+
+* 6. =:eval= (Safety switch)
+If you have a block that takes 2 hours to run, you don't want to accidentally run it every time you export your document.
+
+- =:eval never=: The code will not run, even if you try to execute the buffer.
+- =:eval no-export= You can run it manually while editing, but it won't run automatically during export.
